@@ -1,0 +1,28 @@
+{
+  "name": "drechsler-development/edi",
+  "description": "a bunch of classes and methods using for Electronic Data Interchange (EDI) you can use in your projects",
+  "keywords": [
+    "EDI",
+    "Electronic Data Interchange",
+    "classlibrary",
+    "class-library",
+    "class library",
+    "helper classes"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "EDI\\": "src/EDI"
+    }
+  },
+  "authors": [
+    {
+      "name": "ronny.drechsler-hildebrandt",
+      "email": "info@drechsler-development.de"
+    }
+  ],
+  "require": {
+    "ext-xml":"*"
+  }
+}
