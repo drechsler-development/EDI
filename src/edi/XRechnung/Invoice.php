@@ -342,11 +342,11 @@ class Invoice {
 	}
 
 	/**
-	 * @param DOMElement $node the highest node from where we start recursively removing empty nodes
+	 * @param $node the highest node from where we start recursively removing empty nodes
 	 *
 	 * @return void
 	 */
-	private function RemoveEmptyElements (DOMElement $node): void {
+	private function RemoveEmptyElements ($node): void {
 
 		if ($node->nodeType == XML_ELEMENT_NODE) {
 			if (!$node->hasChildNodes ()) {
@@ -372,7 +372,12 @@ class Invoice {
 	 * @throws DOMException
 	 */
 	private function AddElement (DOMElement $parentNode, string $nodeName, string $value = null, array $attributes = []): false|DOMElement {
-		$element = $this->dom->createElement ($nodeName, htmlspecialchars ($value));
+
+		if(empty($value)) {
+			$element = $this->dom->createElement ($nodeName, $value);
+		}else {
+			$element = $this->dom->createElement ($nodeName, htmlspecialchars ($value));
+		}
 		foreach ($attributes as $attrName => $attrValue) {
 			$element->setAttribute ($attrName, $attrValue);
 		}
