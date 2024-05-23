@@ -1,6 +1,6 @@
 <?php
 
-namespace DD\EDI\XRechnung;
+namespace EDI\XRechnung;
 
 use DOMDocument;
 use DOMElement;

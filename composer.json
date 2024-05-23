@@ -27,6 +27,7 @@
   ],
   "require": {
     "easybill/zugferd-php": "^2.0",
-    "ext-xml":"*"
+    "ext-xml":"*",
+    "ext-dom": "*"
   }
 }

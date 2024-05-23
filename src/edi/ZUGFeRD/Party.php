@@ -1,6 +1,6 @@
 <?php
 
-namespace DD\EDI\ZUGFeRD;
+namespace EDI\ZUGFeRD;
 
 class Party {
 
