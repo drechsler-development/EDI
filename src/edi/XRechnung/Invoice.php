@@ -342,7 +342,7 @@ class Invoice {
 	}
 
 	/**
-	 * @param $node the highest node from where we start recursively removing empty nodes
+	 * @param $node
 	 *
 	 * @return void
 	 */
@@ -371,9 +371,9 @@ class Invoice {
 	 * @return DOMElement|false
 	 * @throws DOMException
 	 */
-	private function AddElement (DOMElement $parentNode, string $nodeName, string $value = null, array $attributes = []): false|DOMElement {
+	private function AddElement (DOMElement $parentNode, string $nodeName, string $value = null, array $attributes = [], bool $dontValidate = false): false|DOMElement {
 
-		if(empty($value)) {
+		if(empty($value) || $dontValidate) {
 			$element = $this->dom->createElement ($nodeName, $value);
 		}else {
 			$element = $this->dom->createElement ($nodeName, htmlspecialchars ($value));
