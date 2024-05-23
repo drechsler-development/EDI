@@ -4,6 +4,9 @@
   "keywords": [
     "EDI",
     "Electronic Data Interchange",
+    "ERechnung",
+    "XRechnung",
+    "ZUGFeRD",
     "classlibrary",
     "class-library",
     "class library",
@@ -13,7 +16,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "EDI\\": "src/EDI"
+      "EDI\\": "src/edi"
     }
   },
   "authors": [
@@ -23,6 +26,7 @@
     }
   ],
   "require": {
+    "easybill/zugferd-php": "^2.0",
     "ext-xml":"*"
   }
 }

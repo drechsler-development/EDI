@@ -1,13 +1,13 @@
 <?php
 
-namespace DD\EDI;
+namespace DD\EDI\XRechnung;
 
 use DOMDocument;
 use DOMElement;
 use DOMException;
 use Exception;
 
-class XRechnung {
+class Invoice {
 
 	#region CONSTANTS
 
