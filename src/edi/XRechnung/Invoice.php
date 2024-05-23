@@ -367,6 +367,7 @@ class Invoice {
 	 * @param string      $nodeName
 	 * @param string|null $value
 	 * @param array       $attributes
+	 * @param bool        $dontValidate
 	 *
 	 * @return DOMElement|false
 	 * @throws DOMException
